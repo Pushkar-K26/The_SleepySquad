@@ -1,67 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Watch Store</title>
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
 
-<body>
-     <nav>
-    <div class="logo gideon-roman-regular">Luxury Time</div>
-    <div class="nav-links gideon-roman-regular">
-      <a href="#">Home</a>
-      <a href="#">Categories</a>
-      <a href="#">Reviews</a>
-      <a href="#">Contact</a>
-    </div>
-  </nav>    
+    <title>Product-1</title>
+  </head>
+  <body>
+    <section class="main_sect">
+      <div class="logo">
+        <img src="./images/logo_rolex-removebg-preview.png" alt="" />
+      </div>
+      <div class="brand">ROLEX</div>
+      <div class="sub">Perpetual Spirit</div>
+      <div class="image-frame">
+        <!-- <img src="https://wallpapercave.com/wp/wp1853749.jpg" alt="Watch" class="watch-img"> -->
+        <img
+          src="https://www.themanual.com/wp-content/uploads/sites/9/2025/03/shutterstock_1866434137-1.jpg"
+          class="img-fluid"
+          alt="Watch"
+        />
+      </div>
+      <div class="description">
+        A timeless icon of precision, strength, and prestige — this masterpiece
+        is more than just a timekeeper; it’s a statement of legacy. Expertly
+        crafted for uncompromising performance beneath the ocean’s depths, yet
+        equally refined for the most elegant occasions on land. Its robust
+        engineering ensures resilience in the harshest environments, while its
+        sophisticated design captivates at a glance. Built to endure. Designed
+        to inspire. Worn by those who demand the extraordinary.
+      </div>
+      <div class="price">₹10,30,000</div>
+      <div class="buttons">
+        <button class="cart">
+          <img src="./images/cart-removebg-preview.png" class="cart-icon" />
+          Add to Cart
+        </button>
 
-    <section class="video-section">
-        <video width = 100% height = 100% autoplay muted loop>
-        <source src="../FrontEnd/Videos/Cinematic Watch Video.mp4" type="video/mp4">
-        Your browser dont support it.
-    </video>
+        <button class="buy">Buy Now</button>
 
-    <div class="text">
-        <h1 class="name luxury-font">SLEEPYSQUAD</h1> 
-        <p class="luxury-font">Welcome to [Your Store Name] — where luxury meets precision.
-            Explore our handpicked collection of premium timepieces, crafted for those who value excellence, elegance, and enduring style.
-        </p>         
-    </div>  
+        <button class="wishlist">
+          <img
+            src="./images/wishlist-removebg-preview (1).png"
+            alt="Wishlist"
+          />
+        </button>
+      </div>
+
+      <div class="watch_details">
+        <div class="first-div">
+          <h3>Case & Material</h3>
+          <ul>
+            <h3>Model case</h3>
+            <li>Oyster, 41 mm, Oystersteel</li>
+            <h3>Oyester Architeture</h3>
+            <li>
+              Monobloc middle case, screw-down case back and winding crown
+            </li>
+            <h3>Diameter</h3>
+            <li>41 mm</li>
+          </ul>
+        </div>
+        <div class="second-div">
+          <h3>Bezel & Crown</h3>
+          <ul>
+            <h3>Material</h3>
+            <li>Oyestersteel</li>
+            <h3>Bezel</h3>
+            <li>
+              Unidirectional rotatable 60-minute graduated, scratch-resistant
+              Cerachrom insert in black ceramic, numerals and graduations coated
+              in platinum
+            </li>
+          </ul>
+        </div>
+        <div class="third-div">
+          <h3>Crystal & Water Resitance</h3>
+          <ul>
+            <h3>Winding Crown</h3>
+            <li>Screw-down, Triplock triple waterproofness system</li>
+            <h3>Crystal</h3>
+            <li>Scratch-resistant sapphire</li>
+            <h3>Water Resistance</h3>
+            <li>Waterproof to 300 metres / 1,000 feet</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="Img_head">Dive In</h3>
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="./images/rolex_2.png"
+              class="d-block w-100"
+              alt="Watch_image"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./images/rolex_5.jpg"
+              class="d-block w-100"
+              alt="Watch_image"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./images/rolex_6.jpg"
+              class="d-block w-100"
+              alt="Watch_image"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="product_sect">
+        <h3>Products You May Like!</h3>
+        <div class="More_Products">
+          <div class="card" style="width: 18rem">
+            <img
+              src="./images/Rolex_prod_like.png"
+              class="card-img-top"
+              alt="Land_dweller"
+            />
+            <div class="card-body">
+              <h4>Land Dweller</h4>
+              <p class="card-text">
+                Offering the perfect balance of elegance and technology,
+                lightness and robustness.
+              </p>
+              <span>₹14,09,000</span>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              src="./images/Rolex_prod_like_2.png"
+              class="card-img-top"
+              alt="Cosmograph_Daytona"
+            />
+            <div class="card-body">
+              <h4>Cosmograph Daytona</h4>
+              <p class="card-text">
+                A legendary chronograph built for speed and precision, the
+                Daytona blends racing heritage with Rolex’s timeless luxury and
+                performance.
+              </p>
+              <span>₹14,68,000</span>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              src="images/Rolex_prod_like_3.png"
+              class="card-img-top"
+              alt="GMT-Master II"
+            />
+            <div class="card-body">
+              <h4>GMT-Master II</h4>
+              <p class="card-text">
+                Robust and functional, the GMT‑Master II is the ideal watch for
+                criss-crossing the globe.
+              </p>
+              <span>₹14,68,000</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <div class="categories gideon-roman-regular">
-      <h2>SHOP BY CATEGORIES</h2>
-      <img src="./Photos/vinatge watches.jpg" class="hover-img">
-      <img src="./Photos/limited edition.jpg" class="hover-img">
-      <img src="./Photos/bestsellers 3.jpg" class="hover-img">
-      <img src="./Photos/luxury watches 3.jpg" class="hover-img">
-      <h3 class="gideon-roman-regular">Vintage Watches</h3>
-      <h3 class="gideon-roman-regular">Limited Editions</h3>
-      <h3 class="gideon-roman-regular">BestSellers</h3>
-      <h3 class="gideon-roman-regular">Luxury Watches</h3>
-    </div>
+    <footer class="rolex-footer">
+      <div class="footer-content">
+        <div class="social-icons">
+          <a
+            href="https://www.facebook.com/Rolex"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://img.icons8.com/ios-filled/25/ffffff/facebook-new.png"
+              alt="Facebook"
+            />
+          </a>
+          <a
+            href="https://www.instagram.com/rolex/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://img.icons8.com/ios-filled/25/ffffff/instagram-new.png"
+              alt="Instagram"
+            />
+          </a>
+        </div>
+        <p class="copyright">&copy; 2025 Rolex. All rights reserved.</p>
+      </div>
+    </footer>
 
-    <div class="reviews">
-        <h2>Luxury in Their Words</h2>        
-        <img src="./Photos/elon musk.jpg">
-        <img src="./Photos/bill gates.jpg">
-        <img src="./Photos/Charles Leclerc .jpg">
-        <p>⭐⭐⭐⭐⭐</p>
-        <p>⭐⭐⭐⭐⭐</p>
-        <p>⭐⭐⭐⭐⭐</p>
-        <p>“An exquisite timepiece that blends heritage with modern craftsmanship. The detailing is unmatched — truly a collector’s delight.”</p>
-        <p>“This isn’t just a watch. It’s an experience. The packaging, service, and the watch itself scream luxury.”</p>
-        <p>“I’ve never received so many compliments on a watch before. It fits perfectly, looks stunning, and feels like it was made just for me.”</p>
-    </div>
-
-    
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
