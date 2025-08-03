@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../Home Page/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <nav>
+      <div class="logo gideon-roman-regular">Luxury Time</div>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      <div class="nav-links gideon-roman-regular" id="nav-links">
+        <a href="#">Home</a>
+        <a href="#about-us">About Us</a>
+        <a href="#categories">Categories</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+        <a href="../Login Page/index.html">Login</a>
+      </div>
+    </nav>    
+
+    <section class="video-section video-bottom-fade" id="bg-video">
+        <video autoplay muted loop>
+          <source src="../Videos/Jacob & co.mp4" type="video/mp4">Your browser dont support it.
+        </video>   
+        <div class="text">
+          <h1 class="name luxury-font">SleepySquad</h1> 
+          <p class="luxury-font">Welcome to <span>Luxury Times</span> , where luxury meets precision.
+            Explore our handpicked collection of premium timepieces, crafted for those who value excellence, elegance, and enduring style.
+          </p>         
+      </div>  
+    </section>
+
+    <section id="about-us" class="about-us gideon-roman-regular">
+      <div class="container about-container">
+        <div class="about-text playfair-display-uniquifier">
+          <h2>About Us</h2>
+          <p>
+            At <strong>Luxury Time</strong>, we don’t just sell watches — we curate moments of prestige, heritage, and craftsmanship.
+          </p>
+          <p>
+            Our collection showcases handpicked timepieces that combine tradition with innovation. Whether you're a seasoned collector or a first-time buyer, we provide more than a product — we offer an experience.
+          </p>
+          <p>
+            Join us in celebrating time — not just how it's measured, but how it's remembered.
+          </p>
+        </div>
+        <div class="about-image">
+          <img src="../Photos/about us.jpeg" alt="Luxury Watch Store">
+        </div>
+      </div>
+    </section>
+
+
+    <section id="categories" class="categories gideon-roman-regular">
+      <h2 class="luxury-font">Shop By Categories</h2>
+      <div class="category-grid">
+        <div class="category-item">
+          <img src="../Photos/vinatge watches.jpg" class="hover-img" alt="Vintage Watches">
+          <h3>Vintage Watches</h3>
+        </div>
+        <div class="category-item">
+          <img src="../Photos/limited edition.jpg" class="hover-img" alt="Limited Editions">
+          <h3>Limited Editions</h3>
+        </div>
+        <div class="category-item">
+          <img src="../Photos/bestsellers 3.jpg" class="hover-img" alt="Bestsellers">
+          <h3>BestSellers</h3>
+        </div>
+        <div class="category-item">
+          <img src="../Photos/luxury watches 3.jpg" class="hover-img" alt="Luxury Watches">
+          <h3>Luxury Watches</h3>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="reviews" class="reviews">
+      <h1 class="gideon-roman-regular">Luxury in Their Words</h1>
+      <div class="review-container playfair-display-uniquifier">
+        <div class="review-card">
+          <img src="../Photos/elon musk.jpg" alt="Elon Musk">
+          <p>“An exquisite timepiece that blends heritage with modern craftsmanship. The detailing is unmatched — truly a collector’s delight.”</p>
+        </div>
+        <div class="review-card">
+          <img src="../Photos/bill gates.jpg" alt="Bill Gates">
+          <p>“This isn’t just a watch. It’s an experience. The packaging, service, and the watch itself scream luxury.”</p>
+        </div>
+        <div class="review-card">
+          <img src="../Photos/Charles Leclerc .jpg" alt="Charles Leclerc">
+          <p>“I’ve never received so many compliments on a watch before. It fits perfectly, looks stunning, and feels like it was made just for me.”</p>
+        </div>
+        <div class="review-card">
+          <img src="../Photos/ronaldo.jpeg" alt="Cristiano Ronaldo">
+          <p>“The ambiance, the craftsmanship, the presentation—it all reflects true luxury. You’re not just buying a watch, you’re investing in an heirloom.”</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2 class="gideon-roman-regular heading">Contact Us</h2>
+      <div clas="contact-content">
+        <p class="gideon-roman-regular">Have a question about our timepieces?</p>
+        <p class="gideon-roman-regular">Need assistance with your purchase?</p>
+        <p class="gideon-roman-regular" id="last">We'd love to hear from you.</p>
+      </div>
+      <form class="contact-form gideon-roman-regular">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button class="send-button" type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2025 Luxury Time. All rights reserved.</p>
+        <p>Behind PICT</p>
+      </div>
+    </footer>
+    
+    <script>
+      const toggle = document.getElementById('menu-toggle');
+      const navLinks = document.getElementById('nav-links');
+      toggle.addEventListener('click', () => 
+      {
+      navLinks.classList.toggle('show');
+      });
+    </script>
+
+  </body>
+</html>
