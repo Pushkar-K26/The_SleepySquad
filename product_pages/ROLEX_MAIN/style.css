@@ -1,77 +1,339 @@
+/* Base Styling */
 html,
 body {
-  margin: 0;
-  padding: 0;
-  background-color: rgb(0, 0, 0);
-  color: white;
-  font-family: "Times New Roman", Times, serif;
-  min-height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+/* Sections */
 .main_sect {
-  width: 100%;
-  background-color: rgb(0, 0, 0);
-  padding: 30px 20px;
-  box-sizing: border-box;
+    width: 100%;
+    background-color: black;
+    padding: 30px 20px;
+    box-sizing: border-box;
 }
 
+/* Header Division */
 .header_div {
-  margin-top: -13px;
-  background-color: #2c3930;
-  box-shadow: 0 0 30px #2c3333, 0 0 30px #f6f0f0;
-  padding-bottom: 0.02px;
-  border-radius: 20px;
-  margin-bottom: 60px;
+    margin-top: -13px;
+    background-color: #2c3930;
+    box-shadow: 0 0 30px #2c3333, 0 0 30px #f6f0f0;
+    padding-bottom: 0.02px;
+    border-radius: 20px;
+    margin-bottom: 60px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.header_div:hover {
+    transform: scale(1.003);
+    box-shadow: 0 0 20px rgb(245, 244, 244), 0 0 5px #f7f7f7;
+}
+
+/* Logo */
+.logo_rol {
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Main Header Text */
 .Rolex_main {
-  margin-top: -40px;
-  color: #f6f0f0;
-  text-align: center;
-  font-size: 2.5rem;
-  font-family: "Times New Roman", Times, serif;
-  font-style: italic;
-}
-.header_div img {
-  max-width: 200px;
-  display: block;
-  margin: 0 auto;
+    margin-top: -30px;
+    color: #f6f0f0;
+    text-align: center;
+    font-size: 2.2rem;
+    font-style: italic;
+    letter-spacing: 1.5px;
+    line-height: 1.4;
+    padding-bottom: 20px; /* Added padding for better spacing */
 }
 
-.More_Products {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-  padding: 40px 10%;
-  padding-bottom: 80px;
+/* Product Line Grid */
+.Product_line {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Default: 2 columns */
+    gap: 30px; /* Reduced from 60px */
+    padding: 40px 5%;
+    padding-bottom: 80px;
+    box-sizing: border-box;
+    justify-content: center; /* Center items in the grid */
 }
+
+/* Card Styling */
 .card {
-  cursor: pointer;
-  box-shadow: 0 0 10px #2c3333, 0 0 10px #f6f0f0;
-  border: solid #2c3930;
-}
-.card-body {
-  background-color: #2c3930;
-}
-
-.card-body p {
-  color: #fdfbee;
-  font-family: "Times New Roman", Times, serif;
-}
-
-.card-body span {
-  color: #fdfbee;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: bold;
-}
-.card-body h4 {
-  color: #fdfbee;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    max-width: 400px; /* Limit card width on larger screens */
+    margin: 0 auto; /* Center individual cards */
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #2c3930;
+    box-shadow: 0 0 10px #2c3333, 0 0 10px #f6f0f0;
+    border: solid #2c3930;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #3d4a42;
 }
 
 .card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 20px rgb(245, 244, 244), 0 0 5px #f7f7f7;
+    transform: scale(1.03);
+    box-shadow: 0 0 25px #d8d8d8, 0 0 8px #e0e0e0;
+}
+
+/* Card Image */
+.card-img-top {
+    width: 100%;
+    height: 300px; /* Consistent height for all images */
+    object-fit: cover;
+    display: block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 5px solid #3d4a42;
+}
+
+/* Card Body */
+.card-body {
+    padding: 15px;
+    background-color: #2c3930;
+    z-index: 2;
+    flex: 1; /* Allows card body to grow and take available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    gap: 10px;
+}
+
+.card-body h3 {
+    color: #fdfbee;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 4px;
+}
+
+.card-body p {
+    color: #fdfbee;
+    font-family: "Cormorant Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.5;
+    max-height: 90px; /* Limit text height */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis for overflow */
+}
+
+.card-body span {
+    display: block;
+    color: #fdfbee;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bolder;
+    font-size: 16px;
+    margin-top: auto; /* Pushes price to the bottom */
+}
+
+/* Stretched Link for entire card */
+.stretched-card-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    text-decoration: none;
+}
+
+/* Footer */
+.rolex-footer {
+    background-color: #2c3930;
+    color: #fdfbee;
+    text-align: center;
+    padding: 10px 10px;
+    font-family: "Times New Roman", serif;
+    border-top: 1px solid #fdfbee;
+    margin-top: 50px;
+    box-shadow: 0 0 20px rgb(245, 244, 244), 0 0 5px #f7f7f7;
+}
+
+.footer-content {
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.social-icons {
+    margin-bottom: 15px;
+}
+
+.social-icons a {
+    margin: 0 12px;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+}
+
+.social-icons img {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(1); /* Makes icons white */
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.social-icons a:hover img {
+    opacity: 1;
+}
+
+.footer-content p {
+    font-size: 14px;
+    color: #fdfbee;
+    margin: 0;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+/* Tablets (max-width: 992px) */
+@media (max-width: 992px) {
+    .Rolex_main {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+
+    .Product_line {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+        gap: 25px; /* Reduced from 40px */
+        padding: 30px 4%;
+    }
+
+    .card-img-top {
+        height: 250px;
+    }
+
+    .card-body h3 {
+        font-size: 18px;
+    }
+
+    .card-body p {
+        font-size: 0.95rem; /* Adjusted for better readability on tablets */
+        line-height: 1.4;
+        max-height: 85px;
+    }
+
+    .card-body span {
+        font-size: 15px;
+    }
+
+    .logo_rol {
+        max-width: 160px;
+    }
+}
+
+/* Mobile Phones (max-width: 576px) */
+@media (max-width: 576px) {
+    .Rolex_main {
+        font-size: 1.6rem;
+        line-height: 1.3;
+    }
+
+    .Product_line {
+        grid-template-columns: 1fr; /* Single column for mobile */
+        gap: 20px; /* Reduced from 30px */
+        padding: 25px 3%;
+    }
+
+    .card {
+        max-width: 350px; /* Constrain card width on small mobiles for better centering */
+    }
+
+    .card-img-top {
+        height: 220px;
+    }
+
+    .card-body {
+        padding: 12px;
+    }
+
+    .card-body h3 {
+        font-size: 17px;
+        margin-bottom: 3px;
+    }
+
+    .card-body p {
+        font-size: 0.9rem;
+        max-height: 80px;
+    }
+
+    .card-body span {
+        font-size: 14px;
+    }
+
+    .logo_rol {
+        max-width: 140px;
+    }
+
+    .footer-content p {
+        font-size: 12px;
+    }
+
+    .social-icons img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* Smaller Mobile Phones (max-width: 400px) */
+@media (max-width: 400px) {
+    .Rolex_main {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+    }
+
+    .Product_line {
+        padding: 20px 2%;
+        gap: 15px; /* Reduced from 20px */
+    }
+
+    .card-img-top {
+        height: 180px;
+    }
+
+    .card-body {
+        padding: 10px;
+    }
+
+    .card-body h3 {
+        font-size: 16px;
+    }
+
+    .card-body p {
+        font-size: 0.85rem;
+        max-height: 70px;
+    }
+
+    .card-body span {
+        font-size: 13px;
+    }
+
+    .logo_rol {
+        max-width: 120px;
+    }
 }
