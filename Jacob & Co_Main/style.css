@@ -1,0 +1,321 @@
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0d0d0d; 
+  color: #f1f1f1;
+  font-family: "Times New Roman", Times, serif;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  display: flex; /* Make body a flex container */
+  flex-direction: column; 
+}
+
+
+.page-wrapper {
+  position: relative;
+  min-height: 100vh; 
+  box-sizing: border-box;
+  display: flex; 
+  flex-direction: column; 
+  flex-grow: 1; /* Allow page-wrapper to grow and fill body space */
+}
+
+.main_sect {
+  padding: 40px 20px;
+  flex-grow: 1; /* Allow main content section to grow and push footer down */
+}
+
+.header_div {
+  margin-top: -13px;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.logo_rol {
+  max-width: 200px;
+  display: block;
+  margin: 0 auto 10px auto;
+  margin-bottom: -55px;
+}
+
+.jacob_main {
+  color: #f6f0f0;
+  font-size: 2.5rem;
+  font-style: italic;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.jacob_title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  color: #f6f0f0;
+}
+
+.jacob_tagline {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+  color: #f6f0f0;
+  margin: 0;
+}
+
+
+.Product_line {
+  display: grid; 
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  flex-wrap: wrap; 
+  justify-content: center; /* Center items horizontally */
+  /*align-items: stretch; /* Make cards stretch to equal height */
+  gap: 100px; /* Gap between cards */
+  /*padding: 40px 5%;*/
+  /*padding-bottom: 80px;*/
+  padding: 0%;
+  box-sizing: border-box;
+  max-width: 1200px; /* Max width for the grid container */
+  margin: 0 auto; /* Center the grid container */
+}
+
+.card {
+  display: grid;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  /*flex: 1 1 calc(50% - 15px); /* Adjusted for 2 columns, accounting for gap */
+  /*max-width: calc(50% - 15px); /* Max width for each card */
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #121212; 
+  box-shadow: 0 0 10px #3f4a6b, 0 0 10px #bad7e9; 
+  border: solid #3f4a6b; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px #bad7e9, 0 0 5px #ffffff; /* Jacob & Co card hover shadows */
+}
+
+.card-img-top {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  display: block;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-body {
+  padding: 15px;
+  background-color: #2b2d42; 
+  z-index: 2;
+  flex: 1; /* Allow card body to grow and take available space */
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body h3 {
+  color: #fdfbee; 
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bolder;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  text-align: center; /* Center card titles */
+}
+
+.card-body p {
+  color: #fdfbee; /* Jacob & Co text color */
+  font-family: "Times New Roman", Times, serif;
+  margin: 10px 0;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+  flex-grow: 1; /* Allow text to grow */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; 
+}
+
+.card-body span {
+  color: #fdfbee;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bolder;
+  display: block; /* Ensure span takes full width */
+  text-align: center; /* Center price */
+  margin-top: auto; /* Push price to the bottom */
+}
+
+.stretched-card-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  text-decoration: none;
+}
+
+.jacob_footer {
+  width: 100%;
+  background-color: black; 
+  color: #fdfbee;
+  text-align: center;
+  padding: 10px 10px; 
+  font-family: "Times New Roman", serif;
+  border-top: 1px solid #fdfbee; 
+  box-shadow: 0 -5px 15px rgba(140, 170, 200, 0.15); 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  margin-top: auto; 
+}
+
+.footer-content {
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.social-icons {
+  margin-bottom: 15px;
+}
+
+.social-icons a {
+  margin: 0 12px;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1); /* Makes icons white */
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.social-icons a:hover img {
+  opacity: 1;
+}
+
+.footer-content p {
+  font-size: 14px;
+  color: #fdfbee; /* Jacob & Co footer text color */
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .jacob_main { 
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+  }
+
+  .Product_line {
+    gap: 20px; /* Adjusted gap on tablets */
+    padding: 30px 3%;
+  }
+
+  .card {
+    flex: 1 1 calc(50% - 10px); /* Adjusted flex-basis for 2 columns with smaller gap */
+    max-width: calc(50% - 10px); /* Adjusted max-width for smaller gap */
+  }
+
+  .card-img-top {
+    max-height: 250px;
+  }
+
+  .card-body h3 {
+    font-size: 1.6rem;
+  }
+
+  .card-body p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .jacob_main { 
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+
+  .Product_line {
+    flex-direction: column; 
+    gap: 30px; /* Gap for stacked cards */
+    padding: 20px 10%; /* More padding for single column */
+  }
+
+  .card {
+    width: 100%; /* Take full width when stacked */
+    max-width: 450px; /* Constrain width for better readability on larger mobile screens */
+    margin: 0 auto; /* Center individual cards when stacked */
+  }
+
+  .card-img-top {
+    max-height: 220px;
+  }
+
+  .card-body h3 {
+    font-size: 1.4rem;
+  }
+
+  .card-body p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .jacob_main { /* Keeping original class name as requested */
+    font-size: 1.5rem;
+    letter-spacing: 0.8px;
+  }
+
+  .main_sect {
+    padding: 20px 10px;
+  }
+
+  .Product_line {
+    padding: 15px 5%; /* Adjust padding for very small screens */
+    gap: 20px; /* Adjusted gap for very small screens */
+  }
+
+  .card-img-top {
+    max-height: 180px;
+  }
+
+  .card-body h3 {
+    font-size: 1.2rem;
+  }
+
+  .card-body p {
+    font-size: 0.8rem;
+  }
+
+  .footer-content p {
+    font-size: 0.8rem;
+  }
+
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+  }
+}

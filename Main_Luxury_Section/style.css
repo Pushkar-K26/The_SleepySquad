@@ -1,0 +1,228 @@
+/* Base Styling */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0d0d0d;
+  color: #f1f1f1;
+  font-family: "Times New Roman", Times, serif;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Page Wrapper for Sticky Footer */
+.page-wrapper {
+  position: relative;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.main_sect {
+  padding: 40px 20px;
+  flex-grow: 1;
+}
+
+.head {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bolder;
+  margin-bottom: 80px;
+  color: #d1d9e6;
+  text-shadow: 0 0 10px rgba(165, 185, 202, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.head:hover {
+  transform: scale(1.03);
+}
+
+.croissant-one-regular {
+  font-family: "Croissant One", serif;
+  color: #dde6ed;
+}
+
+/* Flexbox for card arrangement */
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto 80px auto;
+  padding: 0 20px;
+}
+
+.JC,
+.ROL {
+  flex: 0 1 48%; /* A bit less than 50% to leave room for a gap */
+  margin: 10px; /* Provides the gap between cards */
+  background-color: #121212;
+  border-radius: 5px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.JC {
+  background-color: #121212;
+  box-shadow: 0 0 10px #3f4a6b, 0 0 10px #bad7e9;
+  border: solid #3f4a6b;
+}
+
+.JC:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px #bad7e9, 0 0 5px #ffffff;
+}
+
+.ROL {
+  background-color: #0c2414;
+  box-shadow: 0 0 10px #597445, 0 0 10px #597445;
+  border: solid #0c2414;
+}
+
+.ROL:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px #729762, 0 0 5px #ffffff;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  display: block;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.card-body {
+  padding: 15px;
+  z-index: 2;
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 1.8rem;
+  color: #fdfbee;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #fdfbee;
+  padding: 0 15px 20px;
+  line-height: 1.6;
+  text-align: justify;
+  flex-grow: 1;
+}
+
+.stretched-card-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.lux-footer {
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  box-shadow: 0 -5px 15px rgba(140, 170, 200, 0.15);
+  border-top: 1px solid aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  margin-top: auto;
+}
+
+.footer-text {
+  color: aliceblue;
+  font-family: "Times New Roman", serif;
+  font-size: 1rem;
+  letter-spacing: 0.6px;
+  text-shadow: 0 0 4px rgba(165, 185, 202, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .head {
+    font-size: 3rem;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .head {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+  }
+
+  .card-row {
+    flex-direction: column;
+  }
+
+  .JC,
+  .ROL {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 10px 0; /* Adjust margin for single column */
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .card-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .head {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .main_sect {
+    padding: 30px 10px;
+  }
+
+  .card-row {
+    padding: 0 10px;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+
+  .card-img-top {
+    max-height: 250px;
+  }
+
+  .footer-text {
+    font-size: 0.9rem;
+  }
+}

@@ -77,6 +77,23 @@ body {
   box-shadow: 0 0 10px #28fcb7;
 }
 
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  width: 370px;
+}
+
+.toggle-password {
+  position: absolute;
+  padding-top : 42px;
+  right : 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none;
+}
+
 @media (max-width : 600px)
 {
   .login-container
@@ -87,5 +104,10 @@ body {
   .login-form input
   {
     width : 250px;
+  }
+
+  .toggle-password
+  {
+    right : 20px;
   }
 }
