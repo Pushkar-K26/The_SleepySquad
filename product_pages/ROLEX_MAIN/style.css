@@ -67,7 +67,7 @@ body {
 /* Product Line Grid */
 .Product_line {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Default: 2 columns */
+    grid-template-columns: repeat(4, 1fr); /* Default: 2 columns */
     gap: 30px; 
     padding: 40px 5%;
     padding-bottom: 80px;
@@ -172,57 +172,35 @@ body {
 /* Footer */
 .rolex-footer {
     background-color: #2c3930;
-    color: #fdfbee;
-    text-align: center;
-    padding: 10px 10px;
-    font-family: "Times New Roman", serif;
-    border-top: 1px solid #fdfbee;
-    margin-top: 50px;
-    box-shadow: 0 0 20px rgb(245, 244, 244), 0 0 5px #f7f7f7;
+    color: white;
+    padding-top: 30;
+    width: 100%;
+    margin-top: 40px; /* Space above footer */
+    box-shadow: 0 -5px 15px #2c3333, 0 0 10px #ffffff;
 }
 
 .footer-content {
-    width: 90%;
-    max-width: 400px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 .social-icons {
-    margin-bottom: 15px;
-}
-
-.social-icons a {
-    margin: 0 12px;
-    text-decoration: none;
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
-
-.social-icons a:hover {
-    transform: translateY(-3px);
+    display: flex;
+    gap: 25px;
+    padding-top : 20px;
 }
 
 .social-icons img {
-    width: 28px;
-    height: 28px;
-    filter: brightness(0) invert(1); /* Makes icons white */
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s ease;
 }
 
-.social-icons a:hover img {
-    opacity: 1;
-}
-
-.footer-content p {
-    font-size: 14px;
-    color: #fdfbee;
-    margin: 0;
-}
-
-/* ==================== RESPONSIVE DESIGN ==================== */
-
-/* Tablets (max-width: 992px) */
 @media (max-width: 992px) {
     .Rolex_main {
         font-size: 1.8rem;
@@ -255,6 +233,18 @@ body {
 
     .logo_rol {
         max-width: 160px;
+    }
+
+    .footer-content {
+        padding: 0 15px;
+    }
+    
+    .social-icons {
+        gap: 15px;
+    }
+    
+    .copyright {
+        font-size: 12px;
     }
 }
 
