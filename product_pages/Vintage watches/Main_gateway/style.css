@@ -1,0 +1,180 @@
+/* RESET AND BASE STYLES */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: #f8f1e4;
+  color: #3e3a36;
+  font-family: "Georgia", serif;
+}
+
+/* PAGE LAYOUT */
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* MAIN CONTENT AREA */
+.main_sect {
+  flex: 1;
+  padding: 40px 20px;
+}
+
+/* HEADER */
+.head {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 80px;
+  color: #4e3e2c;
+  text-shadow: 1px 1px 4px #d3c3a0;
+  transition: transform 0.3s ease;
+}
+
+.head:hover {
+  transform: scale(1.03);
+}
+
+.croissant-one-regular {
+  font-family: "Playfair Display", serif;
+}
+
+/* CARD CONTAINER */
+.card-row {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+  margin-bottom: 40px;
+}
+
+/* INDIVIDUAL CARD */
+.avant,
+.maritime,
+.elgin,
+.rolex,
+.cartier,
+.patek {
+  width: 100%;
+  max-width: 350px;
+  margin: 20px auto;
+  background-color: #f3e9da;
+  border: 1px solid #a9865b;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #a9865b;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avant:hover,
+.maritime:hover,
+.elgin:hover,
+.rolex:hover,
+.cartier:hover,
+.patek:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 30px #a47b57;
+}
+
+/* STYLES FOR IMAGE ALIGNMENT */
+.card-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-bottom: 1px solid #a9865b;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-bottom: none;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  color: #4e3e2c;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #3e3a36;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.card-price {
+  text-align: center;
+  font-weight: bold;
+  color: #5c452c;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+/* FULLY CLICKABLE CARD */
+.stretched-card-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+/* FOOTER FIXED TO BOTTOM */
+.vin-footer {
+  background-color: #a9865b;
+  color: #fffef8;
+  text-align: center;
+  font-family: "Georgia", serif;
+  font-size: 1rem;
+  letter-spacing: 0.6px;
+  padding: 20px 10px;
+  border-top: 1px solid #f3e9da;
+  box-shadow: 0 -5px 15px rgba(140, 100, 60, 0.2);
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (min-width: 768px) {
+  .card-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .avant,
+  .maritime,
+  .elgin,
+  .rolex,
+  .cartier,
+  .patek {
+    width: 45%;
+    margin: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .avant,
+  .maritime,
+  .elgin,
+  .rolex,
+  .cartier,
+  .patek {
+    width: 30%;
+  }
+}
